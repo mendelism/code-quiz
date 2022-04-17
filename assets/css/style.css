@@ -1,0 +1,18 @@
+body {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+}
+
+li {
+  list-style: none;
+}
+
+.mt-custom {
+  margin-top: 20vh;
+}
+
+#timer {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 110%;
+}
