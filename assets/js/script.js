@@ -159,21 +159,22 @@ submitScoreBtn.on('click', function(event) {
     initials: initialsInput.val(),
     score: score
   };
+
   submittedScores.push(submittedScore);
 
   localStorage.setItem("submittedScores", JSON.stringify(submittedScores));
   submitScoreBtn.addClass("btn-success");
   initialsInput.val('');
-  addToScores();
+  namesList.append('<li>' + submittedScore.initials);
+  scoresList.append('<li>' + submittedScore.score);
 });
 
-function addToScores() {
-  let lastScore = JSON.parse(localStorage.getItem("submittedScores"));
-  if (lastScore !== null) {
-    for (let i = 0; i < lastScore.length; i++) {
-      console.log(lastScore[i]);
-      namesList.append('<li>' + lastScore[i].initials);
-      scoresList.append('<li>' + lastScore[i].score);
+function addPreviousScores() {
+  let lastScores = JSON.parse(localStorage.getItem("submittedScores"));
+  if (lastScores !== null) {
+    for (let i = 0; i < lastScores.length; i++) {
+      namesList.append('<li>' + lastScores[i].initials);
+      scoresList.append('<li>' + lastScores[i].score);
     }
   }
 }
@@ -194,4 +195,4 @@ restartQuizBtn.on('click', function() {
   showQuestion();
 });
 
-addToScores();
+addPreviousScores();
