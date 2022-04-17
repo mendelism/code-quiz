@@ -7,4 +7,5 @@ This single-page site uses HTML, CSS, and Javascript to create a timed quiz. Onc
 ![Screenshot](assets/images/screenshot.png)
 
 [Github URL](https://github.com/mendelism/code-quiz)
+
 [Deployed application](https://mendelism.github.io/code-quiz/)
